@@ -55,7 +55,6 @@ public class Filme {
         return duracaoEmMinutos;
     }
 
-    
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
