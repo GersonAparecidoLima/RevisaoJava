@@ -1,0 +1,15 @@
+package Main;
+
+public class Filme {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String nome;
+		int anoDeLancamento;
+		boolean incluidoNoPlano;
+		double avaliacao;
+		int totalDeAvaliacoes;
+		int duracaoEmMinutos;		
+	}
+
+}
