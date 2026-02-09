@@ -1,0 +1,16 @@
+package calculos;
+import Main.Filme; // Você precisará importar o Filme se ele estiver em outro pacote
+
+public class CalculadoraDeTempo {
+	private int tempoTotal;
+
+	public int getTempoTotal() {
+		return tempoTotal;
+	}
+	
+	public void incluir(Filme f){
+		tempoTotal += f.getDuracaoEmMinutos();
+	}
+	
+
+}

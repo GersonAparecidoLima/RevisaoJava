@@ -1,0 +1,76 @@
+package Main;
+
+public class Titulo {
+	
+    // 1. Atributos (Privados para garantir o Encapsulamento)
+    private String nome;
+    private int anoDeLancamento;
+    private boolean incluidoNoPlano;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
+    private int duracaoEmMinutos;
+
+    
+    // 2. Métodos de Negócio
+    public void exibeFichaTecnica() {
+        System.out.println("Nome do Filme: " + nome);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
+    }
+
+    public void avalia(double nota) {
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
+    }
+
+    public double pegaMedia() {
+        if (totalDeAvaliacoes == 0) return 0; // Evita divisão por zero
+        return somaDasAvaliacoes / totalDeAvaliacoes;
+    }
+    
+    
+    // 3. Getters e Setters
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
+    public int getTotalDeAvaliacoes() {
+        return totalDeAvaliacoes;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+
+    // Nota: Geralmente não criamos set para 'soma' ou 'total' 
+    // pois eles são controlados pelo método 'avalia'
+    public double getSomaDasAvaliacoes() {
+        return somaDasAvaliacoes;
+    }
+
+
+}

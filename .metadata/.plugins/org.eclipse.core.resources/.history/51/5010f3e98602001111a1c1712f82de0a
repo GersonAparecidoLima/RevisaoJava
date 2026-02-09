@@ -1,0 +1,52 @@
+package Main;
+import calculos.CalculadoraDeTempo;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		Filme meuFilme = new Filme();
+
+		meuFilme.setNome("O poderoso chefão");
+		//meuFilme.anoDeLancamento = 1970;
+		meuFilme.setAnoDeLancamento(1970);
+		//meuFilme.duracaoEmMinutos = 180;
+		meuFilme.setDuracaoEmMinutos(180);
+
+		meuFilme.exibeFichaTecnica();
+		meuFilme.avalia(8);
+		meuFilme.avalia(5);
+		meuFilme.avalia(10);
+
+		System.out.println(meuFilme.getSomaDasAvaliacoes());
+		//System.out.println(meuFilme.totalDeAvaliacoes);
+		System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
+		System.out.println(meuFilme.pegaMedia());
+		
+		
+		Serie lost = new Serie();
+		lost.setNome("Deixados para trás");
+		lost.setAnoDeLancamento(2000);
+		lost.exibeFichaTecnica();
+		lost.setTemporadas(10);
+		lost.setEpisodiosPorTemporada(10);
+		lost.setMinutosPorEpisodio(50);
+		System.out.println("Duração para maratona Lost : " + lost.getDuracaoEmMinutos());
+		
+		
+		Filme outroFilme = new Filme();
+		outroFilme.setNome("Avatar");
+		outroFilme.setAnoDeLancamento(2023);
+		outroFilme.setDuracaoEmMinutos(200);
+		
+		CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+		//calculadora.incluir(meuFilme);
+		System.out.println(calculadora.getTempoTotal());
+		//calculadora.incluir(outroFilme);
+		System.out.println(calculadora.getTempoTotal());
+		
+		
+		
+	}
+
+}

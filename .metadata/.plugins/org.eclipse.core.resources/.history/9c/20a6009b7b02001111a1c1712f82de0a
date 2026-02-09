@@ -1,0 +1,13 @@
+package calculos;
+package Main;
+
+public class CalculadoraDeTempo {
+	private int tempoTotal;
+
+	public int getTempoTotal() {
+		return tempoTotal;
+	}
+	
+	
+
+}
